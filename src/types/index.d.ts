@@ -1,3 +1,5 @@
+import { PropsWithChildren } from "react";
+
 export type Experience = {
   id: number;
   company: string;
@@ -30,3 +32,9 @@ export type ContentPageContext = {
   comments: Comment[];
   title: string;
 };
+
+export interface SectionProps extends PropsWithChildren {
+  content: string;
+  subtitle: string;
+  title: string;
+}
