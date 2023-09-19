@@ -1,6 +1,6 @@
 async function getResource(endpoint) {
   try {
-    const response = await fetch(`${process.env.API_LINK}${endpoint}`);
+    const response = await fetch(`${process.env.GATSBY_API_LINK}${endpoint}`);
 
     return response.json();
   } catch (err) {
