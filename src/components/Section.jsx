@@ -28,7 +28,9 @@ const Section = ({ children, content, subtitle, title }) => {
     <Wrapper>
       <ColouredHeader>{subtitle}</ColouredHeader>
       <h3>{title}</h3>
-      {content ? <ContentWrapper>{content}</ContentWrapper> : null}
+      {content ? (
+        <ContentWrapper data-testid="section-content">{content}</ContentWrapper>
+      ) : null}
       {children}
     </Wrapper>
   );
