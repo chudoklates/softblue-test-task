@@ -56,6 +56,7 @@ const Experience = ({ experience }) => {
               width={40}
               height={40}
               layout="fixed"
+              alt="Be"
             />
             <div>
               <Company>{company}</Company>

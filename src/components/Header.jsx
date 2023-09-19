@@ -8,7 +8,13 @@ const StyledHeader = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20%;
+  padding: 0 5%;
+
+  ${({ theme }) => theme.breakpoints.lg} {
+    & {
+      padding: 0 20%;
+    }
+  }
 `;
 
 const StyledNav = styled.nav`
@@ -37,7 +43,7 @@ const Header = () => {
         <NavLink to="/">Home</NavLink>
         <NavLink to="/services">Services</NavLink>
         <NavLink to="/experience">Experience</NavLink>
-        <CTA to="#comment">Comments</CTA>
+        <CTA to="#comments">Comments</CTA>
       </StyledNav>
     </StyledHeader>
   );

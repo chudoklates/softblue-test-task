@@ -5,9 +5,15 @@ import styled from "styled-components";
 const HeroWrapper = styled.div`
   display: flex;
   justify-content: flex-start;
-  padding-left: 20%;
+  padding-left: 5%;
   align-items: flex-start;
   padding-top: 55px;
+
+  ${({ theme }) => theme.breakpoints.lg} {
+    & {
+      padding-left: 20%;
+    }
+  }
 `;
 
 const ColoredSpan = styled.span`
@@ -15,7 +21,23 @@ const ColoredSpan = styled.span`
 `;
 
 const TextWrapper = styled.div`
-  padding-top: 163px;
+  padding-top: 30px;
+
+  ${({ theme }) => theme.breakpoints.lg} {
+    & {
+      padding-top: 163px;
+    }
+  }
+`;
+
+const ImageWrapper = styled.div`
+  display: none;
+
+  ${({ theme }) => theme.breakpoints.lg} {
+    & {
+      display: block;
+    }
+  }
 `;
 
 const Hero = () => {
@@ -36,13 +58,15 @@ const Hero = () => {
           <li>Front-end Design</li>
         </ol>
       </TextWrapper>
-      <StaticImage
-        src={`../assets/images/model.webp`}
-        alt="Male person looking ahead"
-        height={835}
-        width={620}
-        placeholder="blurred"
-      />
+      <ImageWrapper>
+        <StaticImage
+          src={`../assets/images/model.webp`}
+          alt="Male person looking ahead"
+          height={835}
+          width={620}
+          placeholder="blurred"
+        />
+      </ImageWrapper>
     </HeroWrapper>
   );
 };
