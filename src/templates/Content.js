@@ -4,7 +4,7 @@
  * @returns
  */
 const Content = ({ pageContext }) => {
-  const { comments, title } = pageContext;
+  const { title } = pageContext;
 
   return null;
 };

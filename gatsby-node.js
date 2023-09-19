@@ -18,11 +18,6 @@ exports.createPages = async function ({ actions }) {
   const services = await getResource("/services");
 
   /**
-   * @type {import('./src/types').Comment[]}
-   */
-  const comments = await getResource("/comments");
-
-  /**
    * @type {import('./src/types').Experience[]}
    */
   const experience = await getResource("/experience");
@@ -32,7 +27,6 @@ exports.createPages = async function ({ actions }) {
     component: require.resolve(`./src/templates/Home.js`),
     context: {
       services,
-      comments,
       experience,
     },
   });
@@ -41,8 +35,7 @@ exports.createPages = async function ({ actions }) {
     path: "/experience",
     component: require.resolve(`./src/templates/Content.js`),
     context: {
-      title: "Services",
-      comments,
+      title: "Experience",
     },
   });
 
@@ -50,8 +43,7 @@ exports.createPages = async function ({ actions }) {
     path: "/services",
     component: require.resolve(`./src/templates/Content.js`),
     context: {
-      title: "Experience",
-      comments,
+      title: "Services",
     },
   });
 };

@@ -16,12 +16,21 @@ module.exports = {
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `Poppins\:400,500,600,700`, // you can also specify font weights and styles
+        ],
+        display: "swap",
+      },
+    },
+    {
       resolve: "gatsby-source-filesystem",
       options: {
-        name: "images",
-        path: "./src/images/",
+        name: "assets",
+        path: "./src/assets/",
       },
-      __key: "images",
+      __key: "assets",
     },
   ],
 };
