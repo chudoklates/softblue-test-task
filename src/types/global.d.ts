@@ -1,6 +1,6 @@
 /* process.env autocomplete */
 declare namespace NodeJS {
   export interface ProcessEnv {
-    API_LINK: string;
+    GATSBY_API_LINK: string;
   }
 }

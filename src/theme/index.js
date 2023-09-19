@@ -3,12 +3,17 @@ import { createGlobalStyle } from "styled-components";
 export const theme = {
   colors: {
     background: "#06101a",
+    border: "#cfcfcf",
     text: "#fafafa",
     textSecondary: "#777777",
     primary: "#00bcd4",
+    offWhite: "#d7d7d7",
   },
   typo: {
     fontSizeBase: "16px",
+  },
+  breakpoints: {
+    lg: "@media (min-width: 1200px)",
   },
 };
 

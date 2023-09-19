@@ -118,3 +118,12 @@ const Content = ({ pageContext }) => {
 };
 
 export default Content;
+
+/**
+ *
+ * @param {import('gatsby').PageProps<any, import('../types').ContentPageContext>} props
+ * @returns
+ */
+export const Head = ({ pageContext: { title } }) => {
+  return <title>{title}</title>;
+};
