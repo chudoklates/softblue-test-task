@@ -28,7 +28,7 @@ const Section = ({ children, content, subtitle, title }) => {
     <Wrapper>
       <ColouredHeader>{subtitle}</ColouredHeader>
       <h3>{title}</h3>
-      <ContentWrapper>{content}</ContentWrapper>
+      {content ? <ContentWrapper>{content}</ContentWrapper> : null}
       {children}
     </Wrapper>
   );
