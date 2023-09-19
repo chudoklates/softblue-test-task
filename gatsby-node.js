@@ -1,6 +1,8 @@
 async function getResource(endpoint) {
   try {
-    const response = await fetch(`${process.env.GATSBY_API_LINK}${endpoint}`);
+    const response = await fetch(
+      `https://${process.env.GATSBY_API_TOKEN}.mockapi.io/blog/api${endpoint}`
+    );
 
     return response.json();
   } catch (err) {

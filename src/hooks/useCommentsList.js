@@ -25,7 +25,7 @@ const useCommentsList = ({ page, order }) => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
 
-  const url = `${process.env.GATSBY_API_LINK}/comments`;
+  const url = `https://${process.env.GATSBY_API_TOKEN}.mockapi.io/blog/api/comments`;
 
   /**
    * Retrieves the total number of comments, and sets the count.
