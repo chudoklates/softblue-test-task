@@ -14,10 +14,10 @@
 
 ### Config
 
-This application requires an API endpoint to run correctly. Before starting up, run:
+This application requires a mockAPI project token to run correctly. Before starting up, run:
 
 ```shell
-echo "GATSBY_API_LINK=[YOUR API ENDPOINT]" >> .env.development
+echo "GATSBY_API_TOKEN=[YOUR MOCKAPI TOKEN]" >> .env.development
 ```
 
 Switch to appropriate Node version
