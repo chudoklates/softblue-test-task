@@ -10,16 +10,17 @@ const useSubmitForm = () => {
       `https://${process.env.GATSBY_API_TOKEN}.mockapi.io/blog/api/comments`
     );
 
-    url.searchParams.append("name", name);
-    url.searchParams.append("email", email);
-    url.searchParams.append("content", content);
-
     try {
       await fetch(url, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
+        body: JSON.stringify({
+          name,
+          email,
+          content,
+        }),
       });
       return 0;
     } catch (err) {
