@@ -3,6 +3,7 @@ import styled from "styled-components";
 import HeaderAndHero from "./HeaderAndHero";
 import CommentsList from "./CommentsList";
 import CommentForm from "./CommentForm";
+import Footer from "./Footer";
 
 const Wrapper = styled.div`
   display: flex;
@@ -30,6 +31,7 @@ const Layout = ({ children }) => {
         <CommentsList />
         <CommentForm />
       </Wrapper>
+      <Footer />
     </React.Fragment>
   );
 };
